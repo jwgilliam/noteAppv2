@@ -32,7 +32,7 @@ export const deleteNotes = (noteId) => {
 }
 // build put method to edit data on the database
 export const editNotes = (noteObject) => {
-  return fetch(`http://localhost:8088/notes/${noteObject.id}` {
+  return fetch(`http://localhost:8088/notes/${noteObject.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"

@@ -1,5 +1,5 @@
 // main.js is where you import javascript functions
-import { getNotes } from "./noteProvider";
+import { getNotes } from "./noteProvider.js";
 import noteListComponent from "./noteList.js";
 import noteFormComponent from "./noteForm.js";
 

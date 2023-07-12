@@ -3,7 +3,7 @@ import { saveNotes, editNotes } from "./noteProvider.js";
 
 // Add eventHub and contentTarget
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".note-form-component")
+const contentTarget = document.querySelector(".note-form-container")
 
 // Add note form component
 const noteFormComponent = () => {
@@ -38,7 +38,7 @@ const noteFormComponent = () => {
     
     <div class="note_form">
     <div class="note_form_title">Title: <input type="text" id="title_input"></div>
-    <div class="note_form_body">Body: <input type="text" id="body_input></div>
+    <div class="note_form_body">Body: <input type="text" id="body_input"></div>
     <button id="save_note_button">Save</button>
     <button id="edit_note_button">Edit</button>
     
