@@ -6,12 +6,12 @@ export const setNotes = (notesArray) => {
 }
 // Build method to use the array after setting the data
 export const useNotes = () => {
-  useNotes = notes.slice()
+  notes.slice()
 }
 // Build get method to retrieve data from the database
 export const getNotes = () => {
   return fetch("http://localhost:8088/notes")
-    .then(response => response.json)
+    .then(response => response.json())
     .then(setNotes)
 }
 // Build post method to save data to the database

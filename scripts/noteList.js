@@ -1,5 +1,5 @@
 // Import use notes and delete function from provider
-import { useNotes, deleteNotes } from "./noteProvider.js";
+import { useNotes, deleteNotes, editNotes } from "./noteProvider.js";
 //import note component
 import noteComponent from "./note.js";
 //Write contentTarget and eventHub
@@ -10,7 +10,8 @@ const noteListComponent = () => {
   // write logic for click events
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "show_notes_button") {
-
+      const listOfNotes = useNotes()
+      render(listOfNotes)
     }
 
   })
