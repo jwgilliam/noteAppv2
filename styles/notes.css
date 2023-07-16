@@ -1,1 +1,11 @@
 /*Styling for a specific component, theoretically the notes. You might have a lot of these.  */
+.note_card {
+  border-left-color: navy;
+  border-left-style: inset;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.note_object {
+  margin-bottom: 10px;
+}

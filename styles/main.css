@@ -1,1 +1,8 @@
 /*Link in various styling components, also the app wide styling */
+@import url(notes.css);
+
+.body {
+  background-color: #FCF5E5;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
