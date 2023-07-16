@@ -25,6 +25,31 @@ const noteListComponent = () => {
       })
     }
 
+    if (clickEvent.target.id.startsWith("edit-note--")) {
+      const [prefix, noteId] = clickEvent.target.id.split("--")
+      const editEvent = new CustomEvent("editButtonClicked", {
+        detail: {
+          noteId: noteId
+        }
+      })
+      eventHub.dispatchEvent(editEvent)
+      console.log(noteId)
+    }
+
+    eventHub.addEventListener("editButtonClicked", event => {
+      const noteToEdit = event.detail.noteId
+      const allNotes = useNotes()
+      const selectedNote = allNotes.find(
+        (currentNote) => {
+          return currentNote.id === parseInt(noteToEdit, 10)
+        }
+      )
+      document.querySelector("#note_id").value = selectedNote.id
+      document.querySelector("#title_input").value = selectedNote.title
+      document.querySelector("#body_input").value = selectedNote.body
+
+    })
+
 
 
   })
