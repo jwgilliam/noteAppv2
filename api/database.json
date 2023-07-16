@@ -7,22 +7,10 @@
       "id": 1
     },
     {
-      "date": 1689464891001,
+      "title": "fix delete",
+      "body": "I think it worked",
+      "date": 1689475026791,
       "id": 2
-    },
-    {
-      "date": 1689465176981,
-      "id": 3
-    },
-    {
-      "date": 1689466301507,
-      "id": 4
-    },
-    {
-      "title": "asdfasdfasf",
-      "body": "asdfasdfasfd",
-      "date": 1689466428142,
-      "id": 5
     }
   ]
 }

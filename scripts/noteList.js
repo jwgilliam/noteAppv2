@@ -16,7 +16,20 @@ const noteListComponent = () => {
 
     }
 
+    if (clickEvent.target.id.startsWith("delete-note--")) {
+      const [prefix, noteId] = clickEvent.target.id.split("--")
+      // console.log(noteId)
+      deleteNotes(noteId).then(() => {
+        const newNotes = useNotes()
+        render(newNotes)
+      })
+    }
+
+
+
   })
+
+
 
   // Write function that maps individual objects from the database (render)
   const render = (notes) => {
