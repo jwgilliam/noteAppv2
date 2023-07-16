@@ -11,14 +11,25 @@ const noteListComponent = () => {
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "show_notes_button") {
       const listOfNotes = useNotes()
+      console.log(listOfNotes)
       render(listOfNotes)
+
     }
 
   })
 
   // Write function that maps individual objects from the database (render)
   const render = (notes) => {
-
+    contentTarget.innerHTML = `
+    <section class="note_card_container">
+    <div class="note_card">
+    ${notes.map(note => {
+      return noteComponent(note)
+    }).join("")
+      }
+    </div>
+    </section>
+    `
   }
 }
 

@@ -1,18 +1,23 @@
 // Make empty array to put data into for later 
 let notes = []
 // Build method to set data into that array 
-export const setNotes = (notesArray) => {
-  notes = notesArray.slice()
-}
+
+// export const setNotes = (notesArray) => {
+//   notes = notesArray.slice()
+// }
+
 // Build method to use the array after setting the data
 export const useNotes = () => {
-  notes.slice()
+  return notes
 }
 // Build get method to retrieve data from the database
 export const getNotes = () => {
   return fetch("http://localhost:8088/notes")
     .then(response => response.json())
-    .then(setNotes)
+    .then((notesArray => {
+      notes = notesArray.slice()
+    }))
+    .then(console.log(notes))
 }
 // Build post method to save data to the database
 export const saveNotes = (note) => {
